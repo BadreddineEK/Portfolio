@@ -26,7 +26,10 @@
 	  
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
 	    <div class="container">
-	      <a class="navbar-brand" href="index.html">Badreddine</a>
+			<a class="navbar-brand" href="index.html" style="display: flex; align-items: center;">
+				Badreddine
+				<img src="images/bg_1.png" alt="Photo de profil" style="width: 30px; height: 30px; border-radius: 50%; margin-left: 0.5rem;">
+			</a>
 	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
@@ -45,46 +48,88 @@
 	      </div>
 	    </div>
 	  </nav>
-	  <section id="home-section" class="hero">
-		  <div class="home-slider  owl-carousel">
-	      <div class="slider-item ">
-	      	<div class="overlay"></div>
-	        <div class="container">
-	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_1.png);">
-	          		<div class="overlay"></div>
-	          	</div>
-		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-		          	<div class="text">
-		          		<span class="subheading">Bonjour !</span>
-			            <h1 class="mb-4 mt-3">Je suis <span>EL KHAMLICHI Badreddine</span></h1>
-			            <h2 class="mb-4">Data Scientist et Ingénieur en Machine Learning</h2>
-			            <p><a href="#" class="btn btn-primary py-3 px-4">Hire me</a> <a href="#" class="btn btn-white btn-outline-white py-3 px-4">Mes travaux</a></p>
-		            </div>
-		          </div>
-	        	</div>
-	        </div>
-	      </div>
+	  
+	  
+	  <section id="home" style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; background-color: black; position: relative; overflow: hidden;">
+		<div class="home-content" style="text-align: center; color: white;">
+		  <h1 style="font-size: 3rem; margin-bottom: 1rem;">Badreddine EL KHAMLICHI</h1>
+		  <h2 style="font-size: 2rem; margin-bottom: 1rem;">Data Scientist & ML Engineer</h2>
+		  <p style="font-size: 1.5rem; margin-bottom: 2rem;">Spécialisé en Machine Learning et analyse de données avancée, je transforme vos données en solutions concrètes</p>
+	  
+		  <!-- Réseaux sociaux -->
+		  <div style="margin-bottom: 2rem;">
+			<a href="https://www.linkedin.com/in/badreddine-el-khamlichi/" target="_blank" style="margin: 0 10px; color: #ffbd39;">
+			  <i class="icon-linkedin"></i>
+			</a>
+			<a href="https://github.com/BadreddineEK" target="_blank" style="margin: 0 10px; color: #ffbd39;">
+			  <i class="icon-github"></i>
+			</a>
+		  </div>
+	  
+		  <!-- Boutons principaux -->
+		  <div style="display: flex; gap: 1.5rem; justify-content: center;">
+			<button onclick="location.href='#projects-section'" 
+					style="padding: 1rem 2rem; font-size: 1.1rem; border: none; border-radius: 30px; background-color: #ffbd39; color: white; cursor: pointer; transition: all 0.3s ease;">
+			  Voir mes projets
+			</button>
+			<button onclick="location.href='CV_Francais.pdf'" 
+					style="padding: 1rem 2rem; font-size: 1.1rem; border: 2px solid #ffbd39; border-radius: 30px; background-color: transparent; color: #ffbd39; cursor: pointer; transition: all 0.3s ease;">
+			  Télécharger CV
+			</button>
+		  </div>
+	  
+		  <!-- Chatbot -->
+		  <div style="margin-top: 2rem;">
+			<button style="padding: 0.8rem 1.5rem; font-size: 1rem; border: none; border-radius: 30px; background-color: #ffbd39; color: white; cursor: pointer; opacity: 0.9; transition: all 0.3s ease;">
+			  Chatbot (À venir)
+			</button>
+		  </div>
 
-	      <div class="slider-item">
-	      	<div class="overlay"></div>
-	        <div class="container">
-	          <div class="row d-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_2.png);">
-	          		<div class="overlay"></div>
-	          	</div>
-		          <div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-		          	<div class="text">
-		          		<span class="subheading">Bonjour!</span>
-			            <h1 class="mb-4 mt-3">Je suis un <span>Ingénieur ML</span> basé sur Lyon</h1>
-			            <p><a href="#" class="btn btn-primary py-3 px-4">Hire me</a> <a href="#" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
-		            </div>
-		          </div>
-	        	</div>
-	        </div>
-	      </div>
-	    </div>
-    </section>
+		  <button id="open-chatbot" style="padding: 0.8rem 1.5rem; font-size: 1rem; border: none; border-radius: 30px; background-color: #ffbd39; color: white; cursor: pointer; opacity: 0.9; transition: all 0.3s ease;">
+			Chatbot
+		  </button>
+		  
+		  <!-- Modal -->
+			<div id="chatbot-modal" style="display: none;">
+				<div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 9999; display: flex; justify-content: center; align-items: center;">
+				<div style="background: white; padding: 20px; border-radius: 10px;">
+					<button onclick="closeModal()" style="position: absolute; top: 10px; right: 10px;">X</button>
+					<iframe src="https://huggingface.co/spaces/BadreddineEK/chatbotAI" width="600px" height="400px" frameborder="0"></iframe>
+				</div>
+				</div>
+			</div>
+
+			<script>
+				document.getElementById('open-chatbot').onclick = function() {
+				  document.getElementById('chatbot-modal').style.display = 'flex';
+				};
+			  
+				function closeModal() {
+				  document.getElementById('chatbot-modal').style.display = 'none';
+				}
+			  </script>
+			  
+  
+
+
+
+
+
+
+
+
+
+
+
+	  
+		<!-- Flèche de défilement -->
+		<div style="position: absolute; bottom: 50px; left: 50%; transform: translateX(-50%); text-align: center;">
+			<a href="#about-section" style="color: #ffbd39;">
+				<i class="icon-arrow-down" style="font-size: 2rem; animation: bounce 2s infinite;"></i>
+			</a>
+		</div>
+
+	  </section>
 
     <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
     	<div class="container">
