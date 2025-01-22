@@ -85,43 +85,7 @@
 			</button>
 		  </div>
 
-		  <button id="open-chatbot" style="padding: 0.8rem 1.5rem; font-size: 1rem; border: none; border-radius: 30px; background-color: #ffbd39; color: white; cursor: pointer; opacity: 0.9; transition: all 0.3s ease;">
-			Chatbot
-		  </button>
-		  
-		  <!-- Modal -->
-			<div id="chatbot-modal" style="display: none;">
-				<div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 9999; display: flex; justify-content: center; align-items: center;">
-				<div style="background: white; padding: 20px; border-radius: 10px;">
-					<button onclick="closeModal()" style="position: absolute; top: 10px; right: 10px;">X</button>
-					<iframe src="https://huggingface.co/spaces/BadreddineEK/chatbotAI" width="600px" height="400px" frameborder="0"></iframe>
-				</div>
-				</div>
-			</div>
-
-			<script>
-				document.getElementById('open-chatbot').onclick = function() {
-				  document.getElementById('chatbot-modal').style.display = 'flex';
-				};
-			  
-				function closeModal() {
-				  document.getElementById('chatbot-modal').style.display = 'none';
-				}
-			  </script>
-			  
-  
-
-
-
-
-
-
-
-
-
-
-
-	  
+		  	  
 		<!-- Flèche de défilement -->
 		<div style="position: absolute; bottom: 50px; left: 50%; transform: translateX(-50%); text-align: center;">
 			<a href="#about-section" style="color: #ffbd39;">
@@ -673,6 +637,58 @@
   <script src="js/scrollax.min.js"></script>
   
   <script src="js/main.js"></script>
+
+
+	<!-- CHATBOT-->
+
+	<!-- Bouton Chatbot flottant avec animation et message -->
+<div id="chatbot-container" style="position: fixed; bottom: 20px; right: 20px; display: flex; align-items: center; z-index: 1000;">
+	<!-- Bouton Chatbot -->
+	<button id="chatbot-toggle" 
+			style="width: 60px; height: 60px; background-color: #ffbd39; border: none; border-radius: 50%; font-size: 1.5rem; color: white; cursor: pointer; 
+			box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); animation: bounce 2s infinite; transition: all 0.3s ease;">
+	  💬
+	</button>
+  
+	<!-- Message à côté du bouton -->
+	<span style="margin-left: 10px; color: white; font-size: 1rem; font-family: 'Poppins', sans-serif;">
+	  Avez-vous des questions ?
+	</span>
+  </div>
+  
+	<!-- Fenêtre du chatbot cachée initialement -->
+	<div id="chatbot-window" style="display: none; position: fixed; bottom: 80px; right: 20px; background-color: white; width: 400px; height: 500px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); overflow: hidden; z-index: 1000;">
+		<!-- Ici, tu appelles ta page de chatbot React -->
+		<iframe src="https://chatbot-portfolio-3k0hurrzs-badreddines-projects-31d3ee72.vercel.app" style="width: 100%; height: 100%; border: none;"></iframe>
+	</div>
+  
+  
+  
+  <script>
+	// Fonction pour afficher/masquer la fenêtre du chatbot
+	document.getElementById('chatbot-toggle').onclick = function() {
+	  const chatbotWindow = document.getElementById('chatbot-window');
+	  const isVisible = chatbotWindow.style.display === 'block';
+	  chatbotWindow.style.display = isVisible ? 'none' : 'block';
+	};
+  </script>
+  
+  <!-- Animation du rebond -->
+  <style>
+	@keyframes bounce {
+	  0%, 100% {
+		transform: translateY(0);
+	  }
+	  50% {
+		transform: translateY(-10px);
+	  }
+	}
+  </style>
+  
+
+
+
+
     
   </body>
 
