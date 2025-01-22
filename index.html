@@ -641,28 +641,33 @@
 
 	<!-- CHATBOT-->
 
-	<!-- Bouton Chatbot flottant avec animation et message -->
+<!-- CHATBOT -->
+
+<!-- Bouton Chatbot flottant avec animation et message -->
 <div id="chatbot-container" style="position: fixed; bottom: 20px; right: 20px; display: flex; align-items: center; z-index: 1000;">
 	<!-- Bouton Chatbot -->
 	<button id="chatbot-toggle" 
-			style="width: 60px; height: 60px; background-color: #ffbd39; border: none; border-radius: 50%; font-size: 1.5rem; color: white; cursor: pointer; 
-			box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); animation: bounce 2s infinite; transition: all 0.3s ease;">
+		style="width: 60px; height: 60px; background-color: #ffbd39; border: none; border-radius: 50%; font-size: 1.5rem; color: white; cursor: pointer; 
+		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); animation: bounce 2s infinite; transition: all 0.3s ease;">
 	  💬
 	</button>
-  
+	
 	<!-- Message à côté du bouton -->
 	<span style="margin-left: 10px; color: white; font-size: 1rem; font-family: 'Poppins', sans-serif;">
 	  Avez-vous des questions ?
 	</span>
   </div>
   
-	<!-- Fenêtre du chatbot cachée initialement -->
-	<div id="chatbot-window" style="display: none; position: fixed; bottom: 80px; right: 20px; background-color: white; width: 400px; height: 500px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); overflow: hidden; z-index: 1000;">
-		<!-- Ici, tu appelles ta page de chatbot React -->
-		<iframe src="https://chatbot-portfolio-3k0hurrzs-badreddines-projects-31d3ee72.vercel.app" style="width: 100%; height: 100%; border: none;"></iframe>
+  <!-- Fenêtre du chatbot cachée initialement -->
+  <div id="chatbot-window" style="display: none; position: fixed; bottom: 80px; right: 20px; background-color: white; width: 400px; height: 500px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); overflow: hidden; z-index: 1000;">
+	<div id="messages-container" style="height: 400px; overflow-y: auto; padding: 10px;">
+	  <!-- Les messages s'afficheront ici -->
 	</div>
-  
-  
+	<div style="padding: 10px;">
+	  <input id="user-input" type="text" placeholder="Tapez votre message..." style="width: 70%; padding: 10px; border-radius: 5px; border: 1px solid #ddd;">
+	  <button id="send-button" style="background-color: #ffbd39; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer; color: white;">Envoyer</button>
+	</div>
+  </div>
   
   <script>
 	// Fonction pour afficher/masquer la fenêtre du chatbot
@@ -670,6 +675,42 @@
 	  const chatbotWindow = document.getElementById('chatbot-window');
 	  const isVisible = chatbotWindow.style.display === 'block';
 	  chatbotWindow.style.display = isVisible ? 'none' : 'block';
+	};
+  
+	// Fonction d'envoi de message à l'API
+	async function sendMessageToAPI(message) {
+	  try {
+		const response = await fetch('https://chatbot-portfolio-l2886ih65-badreddines-projects-31d3ee72.vercel.app/api/chatbot', {
+		  method: 'POST',
+		  headers: {
+			'Content-Type': 'application/json',
+		  },
+		  body: JSON.stringify({ message: message }), // On envoie le message de l'utilisateur
+		});
+		const data = await response.json();
+		// Afficher la réponse du bot dans la fenêtre du chatbot
+		addMessageToChat(data.botResponse, 'bot');
+	  } catch (error) {
+		console.error('Erreur:', error);
+	  }
+	}
+  
+	// Fonction pour afficher le message dans la fenêtre de chat
+	function addMessageToChat(message, from) {
+	  const messageElement = document.createElement('div');
+	  messageElement.textContent = message;
+	  messageElement.classList.add(from === 'bot' ? 'botMessage' : 'userMessage');
+	  document.getElementById('messages-container').appendChild(messageElement);
+	}
+  
+	// Fonction pour gérer l'envoi de message
+	document.getElementById('send-button').onclick = function() {
+	  const userMessage = document.getElementById('user-input').value;
+	  if (userMessage.trim()) {
+		addMessageToChat(userMessage, 'user');
+		sendMessageToAPI(userMessage);
+		document.getElementById('user-input').value = ''; // Clear input after sending
+	  }
 	};
   </script>
   
@@ -683,7 +724,27 @@
 		transform: translateY(-10px);
 	  }
 	}
+  
+	/* Styles des messages du chatbot */
+	.botMessage {
+	  background-color: black;
+	  color: white;
+	  padding: 10px;
+	  border-radius: 5px;
+	  max-width: 80%;
+	  margin-bottom: 10px;
+	}
+  
+	.userMessage {
+	  background-color: #ffbd39;
+	  padding: 10px;
+	  border-radius: 5px;
+	  color: black;
+	  max-width: 80%;
+	  margin-bottom: 10px;
+	}
   </style>
+  
   
 
 
