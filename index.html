@@ -599,17 +599,17 @@
 					<div class="card-container">
 						<div class="card-flip">
 							<div class="card front">
-								<img src="images/project-precipitation.jpg" class="card-img-top" alt="Prédiction des précipitations">
+								<img src="images/ST.png" class="card-img-top" alt="UKgas">
 								<div class="card-body">
-									<h5 class="card-title">Prédiction des précipitations</h5>
-									<p class="card-text">Modèles CNN &amp; L-CNN</p>
+									<h5 class="card-title">Analyse et Prédiction de la Consommation de Gaz au Royaume-Uni</h5>
+									<p class="card-text">Modélisation des Séries Temporelles avec UKgas (1960-1986)</p>
 								</div>
 							</div>
 							<div class="card back">
 								<div class="card-body">
 									<h5 class="card-title">Détails du projet</h5>
-									<p>Utilisation de modèles CNN et L-CNN pour prédire les précipitations en se basant sur des images satellites météorologiques.</p>
-									<a href="https://github.com/BadreddineEK/precipitation-prediction" class="btn btn-primary" target="_blank">Voir le projet</a>
+									<p>Étude de la consommation trimestrielle de gaz au Royaume-Uni en utilisant des techniques avancées de séries temporelles. Les modèles testés incluent le lissage exponentiel, la régression linéaire (AR(4)), et SARIMA, avec un focus sur la précision des prévisions pour des horizons à long terme.</p>
+									<a href="https://github.com/BadreddineEK/Serie_Temporelles_UKgas" class="btn btn-primary" target="_blank">Voir le projet</a>
 								</div>
 							</div>
 						</div>
@@ -817,6 +817,13 @@
 	</section>
 	  
 
+	<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+	<script type="text/javascript">
+	   (function(){
+		  emailjs.init("OjQzwrmnvY2lkxRI-"); // Remplacez "YOUR_USER_ID" par votre identifiant utilisateur EmailJS
+	   })();
+	</script>
+
 	<section class="ftco-section contact-section ftco-no-pb" id="contact-section">
 		<div class="container">
 			<div class="row justify-content-center mb-5 pb-3">
@@ -868,28 +875,42 @@
 
 			<div class="row no-gutters block-9">
 				<div class="col-md-6 order-md-last d-flex">
-					<form action="#" class="bg-light p-4 p-md-5 contact-form">
+					<form id="contact-form" class="bg-light p-4 p-md-5 contact-form">
 						<div class="form-group">
-							<input type="text" class="form-control" placeholder="Votre Nom">
+							<input type="text" class="form-control" placeholder="Votre Nom" name="user_name">
 						</div>
 						<div class="form-group">
-							<input type="email" class="form-control" placeholder="Votre Email">
+							<input type="email" class="form-control" placeholder="Votre Email" name="user_email">
 						</div>
 						<div class="form-group">
-							<input type="text" class="form-control" placeholder="Sujet">
+							<input type="text" class="form-control" placeholder="Sujet" name="subject">
 						</div>
 						<div class="form-group">
-							<textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+							<textarea name="message" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
 						</div>
 						<div class="form-group">
 							<input type="submit" value="Envoyer Message" class="btn btn-primary py-3 px-5">
 						</div>
 					</form>
 				</div>
-
+			
 				<div class="col-md-6 d-flex">
 					<div id="map" class="bg-white"></div>
 				</div>
+			</div>
+			
+			<script type="text/javascript">
+				document.getElementById('contact-form').addEventListener('submit', function(event) {
+					event.preventDefault();
+			
+					emailjs.sendForm('service_d8xjzmi', 'template_w25hg69', this)
+						.then(function() {
+							alert('Message envoyé avec succès !');
+						}, function(error) {
+							alert('Échec de l\'envoi du message : ' + JSON.stringify(error));
+						});
+				});
+			</script>
 			</div>
 		</div>
 	</section>
