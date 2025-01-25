@@ -39,59 +39,75 @@
 	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
 	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>À propos</span></a></li>
 	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>CV</span></a></li>
-	          <li class="nav-item"><a href="#services-section" class="nav-link"><span>Services</span></a></li>
 	          <li class="nav-item"><a href="#skills-section" class="nav-link"><span>Skills</span></a></li>
 	          <li class="nav-item"><a href="#projects-section" class="nav-link"><span>Projets</span></a></li>
 	          <li class="nav-item"><a href="#blog-section" class="nav-link"><span>Mon Blog</span></a></li>
+			  <li class="nav-item"><a href="#services-section" class="nav-link"><span>Services</span></a></li>
 	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
 	        </ul>
 	      </div>
 	    </div>
 	  </nav>
 	  
-	  
-	  <section id="home" style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; background-color: black; position: relative; overflow: hidden;">
-		<div class="home-content" style="text-align: center; color: white;">
-		  <h1 style="font-size: 3rem; margin-bottom: 1rem;">Badreddine EL KHAMLICHI</h1>
-		  <h2 style="font-size: 2rem; margin-bottom: 1rem;">Data Scientist & ML Engineer</h2>
-		  <p style="font-size: 1.5rem; margin-bottom: 2rem;">Spécialisé en Machine Learning et analyse de données avancée, je transforme vos données en solutions concrètes</p>
-	  
-		  <!-- Réseaux sociaux -->
-		  <div style="margin-bottom: 2rem;">
-			<a href="https://www.linkedin.com/in/badreddine-el-khamlichi/" target="_blank" style="margin: 0 10px; color: #ffbd39;">
-			  <i class="icon-linkedin"></i>
-			</a>
-			<a href="https://github.com/BadreddineEK" target="_blank" style="margin: 0 10px; color: #ffbd39;">
-			  <i class="icon-github"></i>
-			</a>
-		  </div>
-	  
-		  <!-- Boutons principaux -->
-		  <div style="display: flex; gap: 1.5rem; justify-content: center;">
-			<button onclick="location.href='#projects-section'" 
-					style="padding: 1rem 2rem; font-size: 1.1rem; border: none; border-radius: 30px; background-color: #ffbd39; color: white; cursor: pointer; transition: all 0.3s ease;">
-			  Voir mes projets
-			</button>
-			<button onclick="location.href='CV_Francais.pdf'" 
-					style="padding: 1rem 2rem; font-size: 1.1rem; border: 2px solid #ffbd39; border-radius: 30px; background-color: transparent; color: #ffbd39; cursor: pointer; transition: all 0.3s ease;">
-			  Télécharger CV
-			</button>
-		  </div>
-	  
-		  	  	  
+	  <!-- 
+	  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+	  HOME
+
+
+
+	 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	  -->
+	<section id="home" style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; background: black; color: white; position: relative; overflow: hidden;">
+		<div class="home-content" style="text-align: center;">
+			<h1 style="font-size: 3rem; margin-bottom: 1rem; font-weight: bold;">Badreddine EL KHAMLICHI</h1>
+			<h2 style="font-size: 2rem; margin-bottom: 1rem;">Data Scientist & ML Engineer</h2>
+			<p style="font-size: 1.5rem; margin-bottom: 2rem; max-width: 600px;">Spécialisé en Machine Learning et analyse de données avancée, je transforme vos données en solutions concrètes</p>
+
+			<!-- Réseaux sociaux -->
+			<div style="margin-bottom: 2rem;">
+				<a href="https://www.linkedin.com/in/badreddine-el-khamlichi/" target="_blank" style="margin: 0 10px; color: #ffbd39; font-size: 1.5rem;">
+					<i class="icon-linkedin"></i>
+				</a>
+				<a href="https://github.com/BadreddineEK" target="_blank" style="margin: 0 10px; color: #ffbd39; font-size: 1.5rem;">
+					<i class="icon-github"></i>
+				</a>
+			</div>
+
+			<!-- Boutons principaux -->
+			<div style="display: flex; gap: 1.5rem; justify-content: center;">
+				<button onclick="location.href='#projects-section'" 
+								style="padding: 1rem 2rem; font-size: 1.1rem; border: none; border-radius: 30px; background-color: #ffbd39; color: white; cursor: pointer; transition: all 0.3s ease;">
+					Voir mes projets
+				</button>
+				<button onclick="location.href='CV_Francais.pdf'" 
+								style="padding: 1rem 2rem; font-size: 1.1rem; border: 2px solid #ffbd39; border-radius: 30px; background-color: transparent; color: #ffbd39; cursor: pointer; transition: all 0.3s ease;">
+					Télécharger CV
+				</button>
+			</div>
+		</div>
+
 		<!-- Flèche de défilement -->
 		<div style="position: absolute; bottom: 50px; left: 50%; transform: translateX(-50%); text-align: center;">
 			<a href="#about-section" style="color: #ffbd39;">
 				<i class="icon-arrow-down" style="font-size: 2rem; animation: bounce 2s infinite;"></i>
 			</a>
 		</div>
+	</section>
 
-	  </section>
+	  <!-- 
+	  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 
+	  ABOUT
 
-	  <!-- About Section -->
+
+
+	 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	  -->
     <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
     	<div class="container">
     		<div class="row d-flex">
@@ -107,7 +123,7 @@
 		          <div class="col-md-12 heading-section ftco-animate">
 		          	<h1 class="big">A propos</h1>
 		            <h2 class="mb-4">A propos de moi</h2>
-		            <p>Mini description</p>
+					<p>Passionné de nouvelles technologies et curieux insatiable. En dehors de mon travail, j'aime explorer de nouvelles idées et m'immerger dans des projets créatifs.</p>
 		            <ul class="about-info mt-4 px-md-0 px-2">
 		            	<li class="d-flex"><span>Nom:</span> <span>EL KHAMLICHI Badreddine</span></li>
 		            	<li class="d-flex"><span>Date de naissance:</span> <span>2 avril 2001</span></li>
@@ -130,10 +146,17 @@
         </div>
     	</div>
     </section>
+	  <!-- 
+	  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 
-<!-- Resume Section -->
+	  CV
+
+
+
+	 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	  -->
 <section class="ftco-section ftco-no-pb" id="resume-section">
 	<div class="container">
 	  <div class="row justify-content-center pb-5">
@@ -152,13 +175,21 @@
 				<div class="card-body">
 				  <h5 class="card-title">Master 2 Management et Administration des Entreprises</h5>
 				  <p class="card-text">IAE Lyon - France</p>
-				  <p class="card-date">09/2024 - Présent</p>
+				  <p class="card-date">09/2024 - 07/2025</p>
 				</div>
 			  </div>
 			  <div class="card back">
 				<div class="card-body">
 				  <h5 class="card-title">Détails</h5>
-				  <p>Modules en comptabilité, gestion des ressources humaines, stratégie d'entreprise, et marketing stratégique.</p>
+				<p style="text-align: left;">Cette formation couvre des modules tels que :</p>
+				<ul style="text-align: left;">
+					<li>Introduction au droit</li>
+					<li>Analyse financière et comptabilité</li>
+					<li>Gestion des ressources humaines</li>
+					<li>Stratégie d'entreprise</li>
+					<li>Marketing stratégique</li>
+					<li>Systèmes d'information</li>
+				</ul>
 				</div>
 			  </div>
 			</div>
@@ -166,25 +197,33 @@
 		</div>
   
 		<div class="col-md-4 mb-4">
-		  <div class="card-container">
-			<div class="card-flip">
-			  <div class="card front">
-				<img src="images/polytech-logo.png" class="card-img-top" alt="Polytech">
-				<div class="card-body">
-				  <h5 class="card-title">Diplôme d'Ingénieur en Mathématiques Appliquées et Modélisation</h5>
-				  <p class="card-text">Polytech Lyon - France</p>
-				  <p class="card-date">09/2019 - 09/2024</p>
+			<div class="card-container">
+			  <div class="card-flip">
+				<div class="card front">
+				  <img src="images/polytech-logo.png" class="card-img-top" alt="Polytech Lyon">
+				  <div class="card-body">
+					<h5 class="card-title">Diplôme d'Ingénieur en Mathématiques Appliquées et Modélisation</h5>
+					<p class="card-text">Polytech Lyon - France</p>
+					<p class="card-date">09/2019 - 09/2024</p>
+				  </div>
 				</div>
-			  </div>
-			  <div class="card back">
-				<div class="card-body">
-				  <h5 class="card-title">Détails</h5>
-				  <p>Spécialisation en statistiques, Machine Learning, modélisation, et informatique scientifique.</p>
+				<div class="card back">
+				  <div class="card-body">
+					<h5 class="card-title">Détails</h5>
+					<p style="text-align: left;">Cette formation comprend :</p>
+					<ul style="text-align: left;">
+					  <li>Analyse numérique (éléments finis, problèmes hyperboliques)</li>
+					  <li>Statistiques avancées (modèles Bayésiens, séries temporelles)</li>
+					  <li>Data Science et Machine Learning</li>
+					  <li>Calcul haute performance</li>
+					  <li>Modélisation multi-physique</li>
+					</ul>
+				  </div>
 				</div>
 			  </div>
 			</div>
 		  </div>
-		</div>
+		  
   
 		<div class="col-md-4 mb-4">
 		  <div class="card-container">
@@ -200,8 +239,14 @@
 			  <div class="card back">
 				<div class="card-body">
 				  <h5 class="card-title">Détails</h5>
-				  <p>Formation avancée en apprentissage statistique, modélisation des risques climatiques, et mécanique des fluides.</p>
-				</div>
+				  <p style="text-align: left;">Cette formation comprend :</p>
+				  <ul style="text-align: left;">
+					<li>Modélisation des risques climatiques</li>
+					<li>Mécanique des fluides et approximation numérique</li>
+					<li>Graphes et réseaux écologiques</li>
+					<li>Modélisation en écologie spatiale</li>
+					<li>Apprentissage statistique et stochastique</li>
+				  </ul>				</div>
 			  </div>
 			</div>
 		  </div>
@@ -231,11 +276,11 @@
 		  <div class="card back">
 			<div class="card-body">
 			  <h5 class="card-title">Détails</h5>
-			  <ul>
-				<li>Mise en place d'un benchmark pour comparer différents autoencodeurs et méthodes classiques de réduction de dimension sur des données RNA-seq.</li>
-				<li>Optimisation des autoencodeurs avec des techniques de Machine Learning.</li>
-				<li>Gestion de projet en méthodologie Scrum, avec Jira pour la planification des tâches et la coordination avec l'équipe.</li>
-				<li>Outils : Python (TensorFlow/Keras, Scikit-Learn, Optuna, MLflow), Git, R, et environnement Linux (terminal).</li>
+			  <ul style="text-align: left;">
+				<li>Benchmark pour comparer différents autoencodeurs et méthodes classiques de réduction de dimension.</li>
+				<li>Optimisation des autoencodeurs avec Optuna</li>
+				<li>Gestion de projet en méthodologie Scrum utilisant Jira</li>
+				<li>Outils : Python (TensorFlow/Keras, Scikit-Learn, Optuna, MLflow), Git, R, Linux (bash)</li>
 			  </ul>
 			</div>
 		  </div>
@@ -257,8 +302,11 @@
 				<div class="card back">
 					<div class="card-body">
 						<h5 class="card-title">Détails</h5>
-						<p>Accompagnement des élèves du collège au lycée dans leurs devoirs et renforcement des bases scientifiques solides. Soutien également aux étudiants dans le supérieur et aux candidats préparant des concours en mathématiques.</p>
-					</div>
+						<ul style="text-align: left;">
+							<li>Accompagnement des élèves du collège au lycée dans leurs devoirs et renforcement des bases scientifiques solides.</li>
+							<li>Soutien également aux étudiants dans le supérieur et aux candidats préparant des concours en mathématiques.</li>
+						</ul>
+				    </div>
 				</div>
 			</div>
 		</div>
@@ -279,7 +327,7 @@
 		  <div class="card back">
 			<div class="card-body">
 			  <h5 class="card-title">Détails</h5>
-			  <ul>
+			  <ul style="text-align: left;">
 				<li>Mise en place d'un tableau de bord pour suivre les indicateurs clés de différents départements et analyse des données.</li>
 				<li>Automatisation et structuration des bases de données de l'entreprise.</li>
 				<li>Standardisation et validation des données.</li>
@@ -306,7 +354,7 @@
 		  <div class="card back">
 			<div class="card-body">
 			  <h5 class="card-title">Détails</h5>
-			  <ul>
+			  <ul style="text-align: left;">
 				<li>Prise et analyse d'échantillons en suivant des protocoles selon chaque référence.</li>
 				<li>Saisie des résultats et rédaction de rapports.</li>
 				<li>Validation des normes pour l'envoi aux clients.</li>
@@ -327,7 +375,7 @@
 	</div>
   </section>
   
-  <style>
+	<style>
 	.card-container {
 	  perspective: 1000px;
 	}
@@ -391,54 +439,20 @@
 	}
   </style>
   
+
 	  
-	  <section class="ftco-section" id="services-section">
-		<div class="container">
-		  <div class="row justify-content-center py-5 mt-5">
-			<div class="col-md-12 heading-section text-center ftco-animate">
-			  <h1 class="big big-2">Services</h1>
-			  <h2 class="mb-4">Ce que je propose</h2>
-			  <p>Des services spécialisés en Data Science, Machine Learning et développement analytique.</p>
-			</div>
-		  </div>
-		  <div class="row">
-			<div class="col-md-4 text-center d-flex ftco-animate">
-			  <a href="#" class="services-1">
-				<span class="icon">
-				  <i class="flaticon-analysis"></i>
-				</span>
-				<div class="desc">
-				  <h3 class="mb-5">Analyse de Données</h3>
-				  <p>Exploration, nettoyage et interprétation des données pour des prises de décision stratégiques.</p>
-				</div>
-			  </a>
-			</div>
-			<div class="col-md-4 text-center d-flex ftco-animate">
-			  <a href="#" class="services-1">
-				<span class="icon">
-				  <i class="flaticon-ideas"></i>
-				</span>
-				<div class="desc">
-				  <h3 class="mb-5">Développement de Modèles ML</h3>
-				  <p>Création et optimisation de modèles prédictifs adaptés à vos besoins métier.</p>
-				</div>
-			  </a>
-			</div>
-			<div class="col-md-4 text-center d-flex ftco-animate">
-			  <a href="#" class="services-1">
-				<span class="icon">
-				  <i class="flaticon-flasks"></i>
-				</span>
-				<div class="desc">
-				  <h3 class="mb-5">Tableaux de Bord</h3>
-				  <p>Développement de visualisations interactives avec Power BI ou autres outils.</p>
-				</div>
-			  </a>
-			</div>
-		  </div>
-		</div>
-	  </section>
-	  
+	  <!-- 
+	  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+	  SKILLS
+
+
+
+	 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	  -->
+
 
 	  <section class="ftco-section" id="skills-section">
 		<div class="container">
@@ -514,7 +528,17 @@
 		</div>
 	  </section>
 	  
- 
+ 	  <!-- 
+	  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+	  PROJETS
+
+
+
+	 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	  -->
 
 	  <section class="ftco-section" id="projects-section">
 		<div class="container">
@@ -528,28 +552,29 @@
 	
 			<!-- Row contenant les projets -->
 			<div class="row">
-				<!-- Projet 1 -->
+
+				<!-- Projet 4 -->
 				<div class="col-md-4 mb-4">
 					<div class="card-container">
 						<div class="card-flip">
 							<div class="card front">
-								<img src="images/project-rna-seq.jpg" class="card-img-top" alt="Benchmark RNA-seq">
+								<img src="images/ST.png" class="card-img-top" alt="UKgas">
 								<div class="card-body">
-									<h5 class="card-title">Benchmark sur des données RNA-seq</h5>
-									<p class="card-text">Optimisation de modèles d'autoencodeurs</p>
+									<h5 class="card-title">Analyse et Prédiction de la Consommation de Gaz au Royaume-Uni</h5>
+									<p class="card-text">Modélisation des Séries Temporelles avec UKgas (1960-1986)</p>
 								</div>
 							</div>
 							<div class="card back">
 								<div class="card-body">
 									<h5 class="card-title">Détails du projet</h5>
-									<p>Ce projet consistait à évaluer différents modèles d'autoencodeurs pour analyser des données RNA-seq. J'ai utilisé des frameworks comme TensorFlow et MLflow pour optimiser les modèles.</p>
-									<a href="https://github.com/BadreddineEK/benchmark-rna-seq" class="btn btn-primary" target="_blank">Voir le projet</a>
+									<p>Étude de la consommation trimestrielle de gaz au Royaume-Uni en utilisant des techniques avancées de séries temporelles. Les modèles testés incluent le lissage exponentiel, la régression linéaire (AR(4)), et SARIMA, avec un focus sur la précision des prévisions pour des horizons à long terme.</p>
+									<a href="https://github.com/BadreddineEK/Serie_Temporelles_UKgas" class="btn btn-primary" target="_blank">Voir le projet</a>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-	
+
 				<!-- Projet 2 -->
 				<div class="col-md-4 mb-4">
 					<div class="card-container">
@@ -581,7 +606,29 @@
 					<div class="card-container">
 						<div class="card-flip">
 							<div class="card front">
-								<img src="images/project-precipitation.jpg" class="card-img-top" alt="Prédiction des précipitations">
+								<img src="images/pokemon.png" class="card-img-top" alt="PokéMAM">
+								<div class="card-body">
+									<h5 class="card-title">Reconnaissance de pokémon</h5>
+									<p class="card-text">Modèle CNN </p>
+								</div>
+							</div>
+							<div class="card back">
+								<div class="card-body">
+									<h5 class="card-title">Détails du projet</h5>
+									<p>Utilisation de modèles CNN pour reconnaitre l'image d'un pokémon et dire lequel.</p>
+									<a href="https://github.com/BadreddineEK/pokedexCNN" class="btn btn-primary" target="_blank">Voir le projet</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>	
+
+				<!-- Projet 3 -->
+				<div class="col-md-4 mb-4">
+					<div class="card-container">
+						<div class="card-flip">
+							<div class="card front">
+								<img src="images/meteo.png" class="card-img-top" alt="Prédiction des précipitations">
 								<div class="card-body">
 									<h5 class="card-title">Prédiction des précipitations</h5>
 									<p class="card-text">Modèles CNN &amp; L-CNN</p>
@@ -591,29 +638,30 @@
 								<div class="card-body">
 									<h5 class="card-title">Détails du projet</h5>
 									<p>Utilisation de modèles CNN et L-CNN pour prédire les précipitations en se basant sur des images satellites météorologiques.</p>
-									<a href="https://github.com/BadreddineEK/precipitation-prediction" class="btn btn-primary" target="_blank">Voir le projet</a>
+									<a href="https://github.com/BadreddineEK/-PrecipitationPrediction-" class="btn btn-primary" target="_blank">Voir le projet</a>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 
-				<!-- Projet 4 -->
+
+				<!-- Projet 1 -->
 				<div class="col-md-4 mb-4">
 					<div class="card-container">
 						<div class="card-flip">
 							<div class="card front">
-								<img src="images/ST.png" class="card-img-top" alt="UKgas">
+								<img src="images/project-rna-seq.jpg" class="card-img-top" alt="Benchmark RNA-seq">
 								<div class="card-body">
-									<h5 class="card-title">Analyse et Prédiction de la Consommation de Gaz au Royaume-Uni</h5>
-									<p class="card-text">Modélisation des Séries Temporelles avec UKgas (1960-1986)</p>
+									<h5 class="card-title">Benchmark sur des données RNA-seq</h5>
+									<p class="card-text">Optimisation de modèles d'autoencodeurs</p>
 								</div>
 							</div>
 							<div class="card back">
 								<div class="card-body">
 									<h5 class="card-title">Détails du projet</h5>
-									<p>Étude de la consommation trimestrielle de gaz au Royaume-Uni en utilisant des techniques avancées de séries temporelles. Les modèles testés incluent le lissage exponentiel, la régression linéaire (AR(4)), et SARIMA, avec un focus sur la précision des prévisions pour des horizons à long terme.</p>
-									<a href="https://github.com/BadreddineEK/Serie_Temporelles_UKgas" class="btn btn-primary" target="_blank">Voir le projet</a>
+									<p>Ce projet consistait à évaluer différents modèles d'autoencodeurs pour analyser des données RNA-seq. J'ai utilisé des frameworks comme TensorFlow et MLflow pour optimiser les modèles.</p>
+									<a href="https://github.com/BadreddineEK/benchmark-rna-seq" class="btn btn-primary" target="_blank">Voir le projet</a>
 								</div>
 							</div>
 						</div>
@@ -723,7 +771,17 @@
 
 	</style>
 	  
+	  <!-- 
+	  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+
+	  BLOG
+
+
+
+	 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	  -->
 
 	<section class="ftco-section" id="blog-section">
 		<div class="container">
@@ -756,6 +814,17 @@
 		</div>
 	</section>
 	  
+		  <!-- 
+	  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+	  Compteur
+
+
+
+	 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	  -->
 
 	  <section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
 		<div class="container">
@@ -795,7 +864,77 @@
 		  </div>
 		</div>
 	  </section>
+
+	    	  <!-- 
+	  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+	  SERVICES
+
+
+
+	 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	  -->
 	  
+	  <section class="ftco-section" id="services-section">
+		<div class="container">
+		  <div class="row justify-content-center py-5 mt-5">
+			<div class="col-md-12 heading-section text-center ftco-animate">
+			  <h1 class="big big-2">Services</h1>
+			  <h2 class="mb-4">Ce que je propose</h2>
+			  <p>Des services spécialisés en Data Science, Machine Learning et développement analytique.</p>
+			</div>
+		  </div>
+		  <div class="row">
+			<div class="col-md-4 text-center d-flex ftco-animate">
+			  <a href="#" class="services-1">
+				<span class="icon">
+				  <i class="flaticon-analysis"></i>
+				</span>
+				<div class="desc">
+				  <h3 class="mb-5">Analyse de Données</h3>
+				  <p>Exploration, nettoyage et interprétation des données pour des prises de décision stratégiques.</p>
+				</div>
+			  </a>
+			</div>
+			<div class="col-md-4 text-center d-flex ftco-animate">
+			  <a href="#" class="services-1">
+				<span class="icon">
+				  <i class="flaticon-ideas"></i>
+				</span>
+				<div class="desc">
+				  <h3 class="mb-5">Développement de Modèles ML</h3>
+				  <p>Création et optimisation de modèles prédictifs adaptés à vos besoins métier.</p>
+				</div>
+			  </a>
+			</div>
+			<div class="col-md-4 text-center d-flex ftco-animate">
+			  <a href="#" class="services-1">
+				<span class="icon">
+				  <i class="flaticon-flasks"></i>
+				</span>
+				<div class="desc">
+				  <h3 class="mb-5">Tableaux de Bord</h3>
+				  <p>Développement de visualisations interactives avec Power BI ou autres outils.</p>
+				</div>
+			  </a>
+			</div>
+		  </div>
+		</div>
+	  </section>
+	  
+	  	  <!-- 
+	  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+	 CONTACT
+
+
+
+	 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	  -->
 	<section class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
 		<div class="container">
 			<div class="row justify-content-center">
@@ -929,9 +1068,9 @@
                 <li><a href="#home-section"><span class="icon-long-arrow-right mr-2"></span>Home</a></li>
 				<li><a href="#about-section"><span class="icon-long-arrow-right mr-2"></span>About</a></li>
                 <li><a href="#resume-section"><span class="icon-long-arrow-right mr-2"></span>CV</a></li>
-                <li><a href="#services-section"><span class="icon-long-arrow-right mr-2"></span>Services</a></li>
                 <li><a href="#projects-section"><span class="icon-long-arrow-right mr-2"></span>Projects</a></li>
-                <li><a href="#contact-section"><span class="icon-long-arrow-right mr-2"></span>Contact</a></li>
+                <li><a href="#services-section"><span class="icon-long-arrow-right mr-2"></span>Services</a></li>
+				<li><a href="#contact-section"><span class="icon-long-arrow-right mr-2"></span>Contact</a></li>
               </ul>
             </div>
           </div>
