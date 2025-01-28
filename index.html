@@ -1132,6 +1132,26 @@
 <script src="js/main.js"></script>
 
 
+
+<script>
+	window.onload = function() {
+		alert("Ce site est en développement. Merci de votre compréhension.");
+	};
+</script>
+
+<script>
+	function isMobileDevice() {
+		return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+	}
+
+	if (isMobileDevice()) {
+		window.onload = function() {
+			alert("La version mobile de ce site est encore en développement. Merci de votre compréhension.");
+		};
+	}
+</script>
+
+
 <!-- CHATBOT-->
 
 <!-- Bouton Chatbot flottant avec animation et message -->
